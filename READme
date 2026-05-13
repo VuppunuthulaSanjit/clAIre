@@ -1,0 +1,381 @@
+# clAIre 🤖
+## Autonomous AI Assistive Robot for Elderly & Disabled Individuals
+
+> Submitted to Samsung Solve for Tomorrow 2026
+
+---
+
+# Overview
+
+clAIre is an autonomous assistive robot designed to improve safety, independence, and quality of life for elderly and disabled individuals.
+
+The system combines:
+- Artificial Intelligence
+- Computer Vision
+- Autonomous Navigation
+- Voice Interaction
+- Emergency Response Technology
+- Real-Time Obstacle Detection
+
+clAIre was developed to address critical community challenges including:
+- Falls among seniors
+- Delayed emergency response
+- Isolation and loneliness
+- Limited mobility
+- Accessibility barriers
+
+By integrating robotics and AI into a single assistive platform, clAIre acts as a smart mobility companion capable of following users, detecting hazards, providing reminders, and assisting during emergencies.
+
+---
+
+# Community Problem
+
+In Lake County, many seniors live independently and face growing health and safety challenges. Falls, mobility limitations, and delayed access to help can quickly become dangerous emergencies.
+
+Many existing solutions are:
+- Expensive
+- Difficult to use
+- Limited to one specific function
+- Not accessible for elderly users
+
+clAIre was created to provide an affordable, intelligent, and user-friendly solution that improves everyday safety and independence.
+
+---
+
+# Key Features
+
+## 🚨 Real-Time Obstacle Detection
+- Detects walls, furniture, stairs, and moving obstacles
+- Provides verbal safety warnings
+- Stops automatically when hazards are detected
+
+## 🧭 Autonomous Following System
+- Tracks and follows the user automatically
+- Maintains safe following distance
+- Reduces physical effort for users
+
+## 🗣️ AI Voice Assistant
+- Hands-free voice interaction
+- Natural voice commands
+- Spoken feedback and confirmations
+
+## 📞 Emergency Calling System
+- Voice-activated emergency response
+- Can contact caregivers or emergency services
+- Provides rapid assistance during emergencies
+
+## 💊 Medication & Reminder Support
+- Health reminders
+- Daily schedule assistance
+- Voice-based notifications
+
+## 📱 Smart Companion App
+- Displays robot status
+- Health reminders
+- Battery monitoring
+- Alerts and notifications
+- Logged activity tracking
+
+---
+
+# System Architecture
+
+clAIre consists of four major subsystems:
+
+## 1. Display & Interaction Module
+
+### Components
+- Raspberry Pi
+- Hamtysan Monitor
+- Speakers
+- Microphone
+
+### Functions
+- Voice processing
+- Audio responses
+- System coordination
+- User interaction
+- Emergency communication
+
+---
+
+## 2. Navigation & Vision Module
+
+### Components
+- High-resolution camera
+- ESP32 vision processor
+
+### Functions
+- Real-time obstacle detection
+- User tracking
+- Environmental monitoring
+- Safe path calculation
+- Autonomous navigation
+
+---
+
+## 3. Motor Control System
+
+### Components
+- 550 35T brushed motor
+- 370 planetary motors
+- ESC motor controllers
+- PCB motor driver board
+
+### Functions
+- Smooth movement
+- Precise turning
+- Speed control
+- Emergency stopping
+
+---
+
+## 4. Power System
+
+### Components
+- Dual 5200mAh lithium-ion batteries
+- Crawler BDC80 controllers
+
+### Features
+- 8–12 hour battery life
+- Redundant power architecture
+- Battery protection systems
+
+---
+
+# Technologies Used
+
+## Software
+- Python
+- OpenAI APIs
+- TensorFlow
+- Speech Recognition
+- ESP-NOW Communication
+
+## Hardware
+- Raspberry Pi
+- ESP32
+- Ultrasonic Sensors
+- Camera Modules
+- Motor Drivers
+- Lithium-Ion Battery Systems
+
+## Design Tools
+- TinkerCAD
+- 3D Printing
+- CAD Modeling
+
+---
+
+# Safety Features
+
+## Primary Safety Systems
+- Immediate obstacle stopping
+- Emergency voice commands
+- Verbal hazard warnings
+- Controlled acceleration
+- Dual-controller safety override
+
+## Accessibility Features
+- Hands-free voice control
+- Audio feedback
+- Simple interactions
+- Autonomous assistance
+
+---
+
+# Operational Modes
+
+## Following Mode
+clAIre autonomously follows the user while maintaining a safe distance.
+
+## Obstacle Detection Mode
+The system detects hazards and verbally alerts the user.
+
+## Emergency Mode
+Voice commands trigger emergency calling systems.
+
+## Voice Assistant Mode
+Users can interact naturally through spoken commands.
+
+---
+
+# STEM Applications
+
+clAIre demonstrates the application of STEM through:
+- Robotics Engineering
+- Artificial Intelligence
+- Computer Vision
+- Embedded Systems
+- Electrical Engineering
+- Human-Centered Design
+
+---
+
+# Community Impact
+
+clAIre aims to:
+- Reduce falls and injuries
+- Improve elderly independence
+- Reduce caregiver stress
+- Increase emergency response accessibility
+- Improve quality of life for seniors
+
+The project demonstrates how student-led STEM innovation can directly improve local communities.
+
+---
+
+# Future Improvements
+
+- GPS integration
+- Advanced fall detection
+- Facial recognition
+- Smart home connectivity
+- Multi-language support
+- Health monitoring sensors
+
+---
+
+# Prototype Demonstration
+
+The prototype currently demonstrates:
+- Autonomous movement
+- Obstacle detection
+- Voice interaction
+- Emergency communication
+- AI-assisted navigation
+
+---
+
+# Installation
+
+```bash
+git clone https://github.com/yourusername/clAIre.git
+cd clAIre
+pip install -r requirements.txt
+python main.py
+```
+
+---
+
+# Example Starter Code
+
+```python
+import speech_recognition as sr
+import pyttsx3
+import datetime
+
+engine = pyttsx3.init()
+recognizer = sr.Recognizer()
+
+def speak(text):
+    print("clAIre:", text)
+    engine.say(text)
+    engine.runAndWait()
+
+def listen():
+    with sr.Microphone() as source:
+        print("Listening...")
+        audio = recognizer.listen(source)
+
+    try:
+        command = recognizer.recognize_google(audio)
+        print("User:", command)
+        return command.lower()
+    except:
+        return ""
+
+def emergency_call():
+    speak("Calling emergency contact now.")
+
+def medication_reminder():
+    current_hour = datetime.datetime.now().hour
+
+    if current_hour == 9:
+        speak("Reminder: It is time to take your morning medication.")
+
+def process_command(command):
+
+    if "hello" in command:
+        speak("Hello! How can I assist you today?")
+
+    elif "help" in command or "emergency" in command:
+        emergency_call()
+
+    elif "medication" in command:
+        speak("Checking medication schedule now.")
+
+    elif "stop" in command:
+        speak("Shutting down. Stay safe.")
+        return False
+
+    else:
+        speak("I did not understand that command.")
+
+    return True
+
+speak("Hello, I am clAIre, your assistive AI companion.")
+
+running = True
+
+while running:
+    medication_reminder()
+
+    command = listen()
+
+    if command:
+        running = process_command(command)
+```
+
+---
+
+# requirements.txt
+
+```txt
+SpeechRecognition
+pyttsx3
+pyaudio
+opencv-python
+tensorflow
+flask
+```
+
+---
+
+# Suggested Folder Structure
+
+```txt
+clAIre/
+│
+├── README.md
+├── main.py
+├── requirements.txt
+│
+├── app/
+│
+├── docs/
+│   ├── overview.md
+│   ├── architecture.md
+│   ├── community-impact.md
+│   └── future-plans.md
+│
+├── hardware/
+│
+├── media/
+│
+└── software/
+```
+
+---
+
+# Team Vision
+
+We believe technology should improve lives and strengthen communities.
+
+clAIre represents how AI and robotics can be used not only for innovation, but for empathy, accessibility, and human impact.
+
+---
+
+# License
+
+MIT License
