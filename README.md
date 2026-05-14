@@ -1,37 +1,48 @@
 # clAIre: AI-Powered Assistive Mobility Companion
 **Samsung Solve for Tomorrow 2026 | Project clAIre**
 
-clAIre (Collaborative Life Assistant & Intelligent Robotic Entity) is an autonomous assistive robot designed to support elderly individuals and people with disabilities. By combining computer vision, voice recognition, and autonomous navigation, clAIre provides safety, independence, and peace of mind for seniors living alone.
+clAIre (Collaborative Life Assistant & Intelligent Robotic Entity) is an autonomous assistive robot designed to support elderly individuals in Lake County. It bridges the gap between technology and senior care through autonomous following, obstacle detection, and emergency voice response.
 
-## 🚀 Key Features
-* **Autonomous Following:** Uses PiCam and ESP32 vision processing to track and accompany the user hands-free.
-* **Intelligent Obstacle Detection:** Real-time identification of stairs, furniture, and hazards with verbal warnings.
-* **Emergency Response:** Voice-activated emergency calling triggered by keywords like "Help" or "Emergency."
-* **Health Dashboard:** Integrated app for caregivers to monitor battery life, activity logs, and medication reminders.
+---
 
-## 🛠 Technical System Architecture
+## 📺 Project Video
+> **[Watch our Samsung Solve for Tomorrow Submission Here]**
+> 
+> [![Project clAIre Video](https://img.shields.io/badge/YouTube-Watch%20Video-red?style=for-the-badge&logo=youtube)](INSERT_YOUTUBE_LINK_HERE)
 
+---
 
-The system operates on a multi-controller "Hub & Spoke" model:
-1.  **Display & Interaction:** Raspberry Pi + Hamtysan Monitor (Voice & UI).
-2.  **Vision & Navigation:** ESP32 + High-res Camera (Pathfinding & Obstacle detection).
-3.  **Motor Control:** ESP32 + PCB Motor Driver Board (Propulsion & Steering).
-4.  **Power System:** Dual 5200mAh Li-Ion batteries with Crawler BDC80 management.
-
-## 💻 Technical Specifications
-| Component | Specification |
+## 📸 Gallery
+| **The Robot (clAIre)** | **TinkerCad Design** |
 | :--- | :--- |
-| **Main Compute** | Raspberry Pi 4 / ESP32 |
-| **Vision Processor** | ESP32-CAM |
-| **Primary Motors** | 550 35T Brushed / 370 Planetary |
-| **Power** | 10,400 mAh Total Capacity |
-| **Communication** | ESP-NOW (Wireless Low-Latency) |
+| ![clAIre Build](./images/claire_physical.jpg) | ![3D Design](./images/claire_cad.png) |
+| *Final autonomous build.* | *Mechanical design for 3D printing.* |
 
-## 🌍 Community Impact
-Developed for the Lake County community, clAIre addresses the critical "safety gap" for seniors. Our research shows that delayed emergency response is a primary fear for elderly residents; clAIre provides a 24/7 autonomous safety net that functions without the need for manual phone operation.
+| **Caregiver Dashboard** | **Community Impact** |
+| :--- | :--- |
+| ![App Screenshot](./images/app_dashboard.png) | ![Senior Testing](./images/senior_test.jpg) |
+| *Mobile app for remote monitoring.* | *Field testing with local seniors.* |
 
-## 📂 Repository Structure
-* `/src/vision`: ESP32-CAM obstacle detection scripts.
-* `/src/navigation`: ESP-NOW communication and motor logic.
-* `/src/app`: Dashboard code for caregiver monitoring.
-* `/docs`: CAD (TinkerCad) files and circuit diagrams.
+---
+
+## 👥 Our Team
+| Member | Role | Key Contributions |
+| :--- | :--- | :--- |
+| **Ritika** | Project Lead | Problem identification & specialist interviews. |
+| **Jairus** | Hardware Engineer | 3D design (TinkerCad) & hardware assembly. |
+| **Shashank** | Software Developer | Mobile app UI/UX & backend dashboard. |
+| **Caleb** | Robotics Specialist | Motor control logic & navigation testing. |
+| **Nathan** | Media Lead | Video production & technical documentation. |
+---
+
+## 🛠 Technical Overview (f=cde)
+* **Functions:** Autonomous user tracking, verbal obstacle warnings, and voice-activated emergency calling.
+* **Components:** Dual ESP32 Microcontrollers, Raspberry Pi 4, PiCam, 5200mAh Li-Ion batteries.
+* **Design/Engineering:** Modular 3D-printed chassis utilizing ESP-NOW for low-latency communication between vision and drive systems.
+
+---
+
+## 📂 File Structure
+* `/src/navigation`: ESP32 code for motor control and following.
+* `/src/interaction`: Raspberry Pi Python code for AI voice assistant.
+* `/design`: TinkerCad STL files and circuit diagrams.
