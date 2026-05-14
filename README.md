@@ -218,13 +218,6 @@ Built by students at **Vernon Hills High School** — Lake County, IL.
 
 ---
 
-## 📄 License
-
-This project is open-source and intended for educational and humanitarian use.  
-See [LICENSE](LICENSE) for details.
-
----
-
 <div align="center">
 
 **clAIre** — *Built with purpose, empathy, and impact.*
