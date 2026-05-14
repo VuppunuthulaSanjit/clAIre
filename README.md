@@ -1,53 +1,62 @@
-# clAIre: AI-Powered Assistive Mobility Companion
-**Samsung Solve for Tomorrow 2026 | Project clAIre**
-
-clAIre (Collaborative Life Assistant & Intelligent Robotic Entity) is an autonomous assistive robot designed to support elderly individuals in Lake County. It bridges the gap between technology and senior care through autonomous following, obstacle detection, and emergency voice response.
-
----
-
-## 📺 Project Presentation & Demo
-*Watch our full 3-minute submission video below:*
-
-<video src="./assets/claire_demo.mp4" width="100%" controls>
-  Your browser does not support the video tag. You can <a href="./assets/claire_demo.mp4">download the video here</a>.
-</video>
+# clAIre 🤖
+### **AI-Powered Assistive Mobility Companion**
+*Samsung Solve for Tomorrow 2026 | Lake County, IL*
 
 ---
 
-## 📸 Project Gallery
-| **The Physical Robot** | **Engineering & Design** |
-| :--- | :--- |
-| ![clAIre Build](./images/claire_physical.jpg) | ![3D Design](./images/claire_cad.png) |
-| *Final autonomous build.* | *3D Modeling and chassis planning.* |
+## 📽️ Project Demo
+**Watch how clAIre is changing lives.** <div align="center">
+  <video src="./assets/claire_demo.mp4" width="90%" style="border-radius: 10px; border: 2px solid #5865F2;" controls>
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-| **Caregiver App UI** | **Community Connection** |
-| :--- | :--- |
-| ![App Screenshot](./images/app_dashboard.png) | ![Senior Testing](./images/senior_test.jpg) |
-| *Real-time dashboard for health alerts.* | *Testing with local seniors and specialists.* |
+---
+
+## 🚀 The Vision
+**clAIre** (Collaborative Life Assistant & Intelligent Robotic Entity) is an autonomous assistive robot designed to support elderly individuals. By bridging the gap between hardware and empathy, we provide a 24/7 safety net for those living independently.
+
+### **Core Capabilities**
+* 📍 **Autonomous Tracking:** Hands-free following using PiCam vision.
+* ⚠️ **Obstacle Intelligence:** Real-time hazard detection with verbal warnings.
+* 🚨 **Voice Emergency:** Immediate contact with authorities via voice commands.
+* 📊 **Caregiver App:** Remote health monitoring and medication logs.
+
+---
+
+## 📸 Technical Gallery
+
+| **The Hardware** | **The Design** |
+| :---: | :---: |
+| <img src="./images/claire_physical.jpg" width="300" style="border-radius:10px"> | <img src="./images/claire_cad.png" width="300" style="border-radius:10px"> |
+| *Final Physical Build* | *TinkerCad Engineering* |
+
+| **The Software** | **The Impact** |
+| :---: | :---: |
+| <img src="./images/app_dashboard.png" width="300" style="border-radius:10px"> | <img src="./images/senior_test.jpg" width="300" style="border-radius:10px"> |
+| *Caregiver Dashboard* | *Community Field Testing* |
 
 ---
 
 ## 👥 Meet the Team
-| Member | Role | Key STEM Contributions |
-| :--- | :--- | :--- |
-| **Ritika** | Project Lead | Problem identification, news research, and specialist interviews. |
-| **Jairus** | Hardware Lead | 3D design (TinkerCad), robot assembly, and sensor mounting. |
-| **Shashank** | Lead Developer | Interactive app dashboard, data security, and notification logic. |
-| **Caleb** | Robotics Engineer | Motor control programming and motion detection testing. |
-| **Nathan** | Media & Editor | Video production, documentation, and technical scriptwriting. |
-| **Julia & Joshua** | UX Specialists | Senior community coordination and user interaction testing. |
+| Member | Specialty |
+| :--- | :--- |
+| **Ritika** | Project Lead & Research |
+| **Jairus** | Hardware & 3D Engineering |
+| **Shashank** | Software & UI Development |
+| **Caleb** | Robotics & Navigation |
+| **Nathan** | Media & Documentation |
+| **Julia & Joshua** | UX & Senior Outreach |
 
 ---
 
-## 🛠 Technical Overview (F=CDE)
-* **Functions (F):** Real-time autonomous following, fall detection alerts, and hands-free emergency calling.
-* **Components (C):** Dual ESP32 Microcontrollers, Raspberry Pi 4, Hamtysan Monitor, and 10,400mAh dual-battery system.
-* **Design/Engineering (E):** Utilization of **ESP-NOW** for low-latency wireless communication and TinkerCad for custom 3D-printed modular components.
+## 🛠️ Tech Stack (F=CDE)
+- **Functions:** Following, Fall Detection, Emergency Calling.
+- **Components:** Raspberry Pi 4, Dual ESP32, 10,400mAh Battery.
+- **Engineering:** ESP-NOW Wireless Protocol, 3D Printed Chassis.
 
 ---
 
-## 📂 Repository Structure
-* `/src/navigation`: ESP32 source code for motor control and following.
-* `/src/interaction`: Python AI voice assistant scripts for Raspberry Pi.
-* `/design`: 3D STL files and electrical wiring diagrams.
-* `/assets`: Video and high-resolution project documentation.
+<p align="center">
+  Submitted to <b>Samsung Solve for Tomorrow</b> 2026
+</p>
