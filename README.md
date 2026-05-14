@@ -5,44 +5,49 @@ clAIre (Collaborative Life Assistant & Intelligent Robotic Entity) is an autonom
 
 ---
 
-## 📺 Project Video
-> **[Watch our Samsung Solve for Tomorrow Submission Here]**
-> 
-> [![Project clAIre Video](https://img.shields.io/badge/YouTube-Watch%20Video-red?style=for-the-badge&logo=youtube)](INSERT_YOUTUBE_LINK_HERE)
+## 📺 Project Presentation & Demo
+*Watch our full 3-minute submission video below:*
+
+<video src="./assets/claire_demo.mp4" width="100%" controls>
+  Your browser does not support the video tag. You can <a href="./assets/claire_demo.mp4">download the video here</a>.
+</video>
 
 ---
 
-## 📸 Gallery
-| **The Robot (clAIre)** | **TinkerCad Design** |
+## 📸 Project Gallery
+| **The Physical Robot** | **Engineering & Design** |
 | :--- | :--- |
 | ![clAIre Build](./images/claire_physical.jpg) | ![3D Design](./images/claire_cad.png) |
-| *Final autonomous build.* | *Mechanical design for 3D printing.* |
+| *Final autonomous build.* | *3D Modeling and chassis planning.* |
 
-| **Caregiver Dashboard** | **Community Impact** |
+| **Caregiver App UI** | **Community Connection** |
 | :--- | :--- |
 | ![App Screenshot](./images/app_dashboard.png) | ![Senior Testing](./images/senior_test.jpg) |
-| *Mobile app for remote monitoring.* | *Field testing with local seniors.* |
+| *Real-time dashboard for health alerts.* | *Testing with local seniors and specialists.* |
 
 ---
 
-## 👥 Our Team
-| Member | Role | Key Contributions |
+## 👥 Meet the Team
+| Member | Role | Key STEM Contributions |
 | :--- | :--- | :--- |
-| **Ritika** | Project Lead | Problem identification & specialist interviews. |
-| **Jairus** | Hardware Engineer | 3D design (TinkerCad) & hardware assembly. |
-| **Shashank** | Software Developer | Mobile app UI/UX & backend dashboard. |
-| **Caleb** | Robotics Specialist | Motor control logic & navigation testing. |
-| **Nathan** | Media Lead | Video production & technical documentation. |
----
-
-## 🛠 Technical Overview (f=cde)
-* **Functions:** Autonomous user tracking, verbal obstacle warnings, and voice-activated emergency calling.
-* **Components:** Dual ESP32 Microcontrollers, Raspberry Pi 4, PiCam, 5200mAh Li-Ion batteries.
-* **Design/Engineering:** Modular 3D-printed chassis utilizing ESP-NOW for low-latency communication between vision and drive systems.
+| **Ritika** | Project Lead | Problem identification, news research, and specialist interviews. |
+| **Jairus** | Hardware Lead | 3D design (TinkerCad), robot assembly, and sensor mounting. |
+| **Shashank** | Lead Developer | Interactive app dashboard, data security, and notification logic. |
+| **Caleb** | Robotics Engineer | Motor control programming and motion detection testing. |
+| **Nathan** | Media & Editor | Video production, documentation, and technical scriptwriting. |
+| **Julia & Joshua** | UX Specialists | Senior community coordination and user interaction testing. |
 
 ---
 
-## 📂 File Structure
-* `/src/navigation`: ESP32 code for motor control and following.
-* `/src/interaction`: Raspberry Pi Python code for AI voice assistant.
-* `/design`: TinkerCad STL files and circuit diagrams.
+## 🛠 Technical Overview (F=CDE)
+* **Functions (F):** Real-time autonomous following, fall detection alerts, and hands-free emergency calling.
+* **Components (C):** Dual ESP32 Microcontrollers, Raspberry Pi 4, Hamtysan Monitor, and 10,400mAh dual-battery system.
+* **Design/Engineering (E):** Utilization of **ESP-NOW** for low-latency wireless communication and TinkerCad for custom 3D-printed modular components.
+
+---
+
+## 📂 Repository Structure
+* `/src/navigation`: ESP32 source code for motor control and following.
+* `/src/interaction`: Python AI voice assistant scripts for Raspberry Pi.
+* `/design`: 3D STL files and electrical wiring diagrams.
+* `/assets`: Video and high-resolution project documentation.
